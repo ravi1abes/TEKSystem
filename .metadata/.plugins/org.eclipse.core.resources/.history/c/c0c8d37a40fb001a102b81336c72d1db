@@ -1,0 +1,15 @@
+package com.koch.Utility;
+
+import org.openqa.selenium.WebDriver;
+
+public class GlobalVar {
+
+	public static WebDriver Driver= null;
+	//public static ExcelDataProvider exceldata = null;
+	//public static ConfigDataProvider configdata = null;
+	//public static ExtentReports  report=null;
+	//public static ExtentTest test;
+	public static String Browser = "";
+	public static String URL = "";
+	
+}

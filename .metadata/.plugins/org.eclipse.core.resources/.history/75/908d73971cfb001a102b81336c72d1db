@@ -1,0 +1,31 @@
+package com.koch.TestScripts;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.koch.Pages.BaseClass;
+import com.koch.Utility.GlobalVar;
+
+public class ValidateBookTicket extends BaseClass {
+	
+	@Test
+	public static void TestBookTicketfunctionality() {
+		
+		Logger loggers=Logger.getLogger(ValidateBookTicket.class.getName());
+		ValidateBookTicket searchpage = PageFactory.initElements(GlobalVar.Driver, ValidateBookTicket.class);
+		logger=report.createTest("TC_Validate Book Ticket :- " + "Validate the User is able to search the flight ticket");
+		//loggers.info("Application  :- " );
+		String ApplicationTitle="ixigo - Flights, Train Reservation, Hotels, Air Tickets, Bus Booking";
+		String ActualApplicationTitle =GlobalVar.Driver.getTitle();
+		//Validate the Page
+		Assert assert=new Assert();
+		Reporter.log("Application Tiltle : - " + );
+		
+		
+		
+	}
+
+}

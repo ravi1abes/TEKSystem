@@ -1,0 +1,24 @@
+package com.koch.TestScripts;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import com.koch.Pages.BaseClass;
+import com.koch.Utility.GlobalVar;
+
+public class ValidateBookTicket extends BaseClass {
+	
+	@Test
+	
+	public static void TestBookTicketfunctionality() {
+		
+		Logger loggers=Logger.getLogger(ValidateBookTicket.class.getName());
+		ValidateBookTicket loginpage = PageFactory.initElements(GlobalVar.Driver, ValidateBookTicket.class);
+		logger=report.createTest("TC_Login to Application :- " + "Validate the User is able to Login");
+		
+		
+		
+	}
+
+}

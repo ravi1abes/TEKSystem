@@ -1,0 +1,48 @@
+package com.koch.Utility;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+
+public class Initializer {
+	
+	// public static ExcelDataProvider exceldata = null;
+		// public static ConfigDataProvider configdata = null;
+		// public static ExtentReports report=null;
+		// public static ExtentTest test;
+		public static FileInputStream configfis = null;
+		// public static FileInputStream urlfis = null;
+		// public static Properties urlProp = null;
+		public static Properties configProp = null;
+		public static Properties log4jProp = null;
+		public static Logger addlog = null;
+
+		public static void initialize() throws Throwable {
+			addlog = Logger.getLogger("Initializer");
+			// GlobalVar.exceldata = new ExcelDataProvider();
+			// GlobalVar.configdata = new ConfigDataProvider();
+
+			// ExtentHtmlReporter extent=new ExtentHtmlReporter(new
+			// File(System.getProperty("user.dir")+"/Reports/CIMReports_" +
+			// Helper.GetCurrentDateFormat()+ ".html"));
+			// GlobalVar.report=new ExtentReports();
+			// GlobalVar.report.attachReporter(extent);
+
+			// configure log4j properties file
+			PropertyConfigurator.configure("E:\\Study Matterial\\CIMFramework.Selenium\\Config\\Log4j.properties");
+			// PropertyConfigurator.configure(System.getProperty("user.dir")+
+			// File.separator + "Config " +File.separator + "Log4j.properties");
+
+			// configure Config properties file
+			configfis = new FileInputStream(new File(
+					System.getProperty("user.dir") + File.separator + "Config" + File.separator + "config.properties"));
+			configProp = new Properties();
+			configProp.load(configfis);
+			PropertyConfigurator.configure(configProp);
+			GlobalVar.Browser = configProp.getProperty("Browser");
+			GlobalVar.URL = configProp.getProperty("URL");
+
+		}
+
+
+}

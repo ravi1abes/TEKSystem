@@ -1,0 +1,20 @@
+package com.koch.Pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class ResultPage {
+	
+	
+	@FindBy(xpath="(.//input[@type='text'])[1]")
+	public WebElement ChkNonStop;
+	
+	public void ClickNonStop() {
+		ChkNonStop.click();
+		
+	}
+	
+	
+	
+
+}

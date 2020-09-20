@@ -1,0 +1,46 @@
+package com.koch.Pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePage {
+
+public WebDriver driver=null;
+	
+	public HomePage(WebDriver driver) {
+		
+		this.driver=driver;
+		
+	}
+	
+	@FindBy(xpath="(.//input[@type="text"])[1]")
+	public WebElement FromField;
+	
+	@FindBy(xpath="(.//input[@type="text"])[1]")
+	public WebElement ToField;
+	
+	
+	
+	@FindBy(id="login-button")
+	public WebElement LoginBtn;
+	
+	
+/*	public String EnterUserName(String ApplicationUn ){
+		username.sendKeys(ApplicationUn);
+		return ApplicationUn;
+			
+	}
+	
+	public String EnterPassword(String ApplicationPwd) {
+		Password.sendKeys(ApplicationPwd);
+		return ApplicationPwd;
+		
+	}*/
+	
+	public void ClickLoginBtn() {
+		LoginBtn.click();
+		
+	}
+
+}
